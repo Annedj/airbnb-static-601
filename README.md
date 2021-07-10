@@ -1,24 +1,15 @@
-# README
+Let's build a simple AirBnB clone with a [remote static JSON](https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/flats.json) DB with:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- A home page listing flats
+- A _dynamic_ show page for a specific flat
 
-Things you may want to cover:
+#### Reminder
 
-* Ruby version
+One way to get infos from a JSON in Ruby is:
 
-* System dependencies
+```ruby
+require "open-uri"
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+url = "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/flats.json"
+flats = JSON.parse(open(url).read)
+```
